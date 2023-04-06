@@ -1,0 +1,13 @@
+FROM debian:bookworm
+
+# Patch in deb-srcs
+#RUN cp /etc/apt/sources.list /etc/apt/sources.list.d/debian-src.list
+#RUN sed --in-place 's/deb/deb-src/g' /etc/apt/sources.list.d/debian-src.list
+RUN sed --in-place 's/Types: deb/Types: deb deb-src/g' /etc/apt/sources.list.d/debian.sources
+RUN apt-get update
+
+# bcache deps
+RUN apt-get build-dep -y linux
+RUN apt-get install -y linux-source xz-utils git
+# Get debian/ folder
+#RUN apt-get source --download-only linux

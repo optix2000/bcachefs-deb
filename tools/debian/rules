@@ -1,0 +1,20 @@
+#!/usr/bin/make -f
+
+export DEB_BUILD_MAINT_OPTIONS=hardening=+all
+PREFIX := /usr
+
+DEB_BUILD_ARCH ?= $(shell dpkg-architecture -qDEB_BUILD_ARCH)
+
+ifeq ($(DEB_BUILD_ARCH),amd64)
+    DEB_BUILD_MAINT_OPTIONS += optimize=-lto
+endif
+
+%:
+	dh $@
+
+override_dh_auto_install:
+	dh_auto_install -- "PREFIX=$(PREFIX)"
+
+override_dh_auto_clean:
+
+override_dh_auto_test:

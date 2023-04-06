@@ -1,0 +1,63 @@
+bcachefs-tools (24-1) unstable; urgency=medium
+
+  * New upstream release 
+
+ -- Jonathan Carter <jcc@debian.org>  Tue, 29 Nov 2022 09:40:27 +0200
+
+bcachefs-tools (23-1) unstable; urgency=medium
+
+  * New upstream release
+  * Update standards version to 4.6.1
+
+ -- Jonathan Carter <jcc@debian.org>  Mon, 31 Oct 2022 11:45:25 +0200
+
+bcachefs-tools (0.1+git20220216.a1e928a-1) unstable; urgency=medium
+
+  * New upstream snapshot
+  * Grab patch from Ubuntu to reduce memory on amd64 builders
+    (http://launchpadlibrarian.net/580140160/bcachefs-tools_0.1+git20210805.6c42566-2_0.1+git20210805.6c42566-2ubuntu1.diff.gz)
+  * Update copyright years
+
+ -- Jonathan Carter <jcc@debian.org>  Wed, 16 Feb 2022 14:42:20 +0200
+
+bcachefs-tools (0.1+git20210805.6c42566-2) unstable; urgency=medium
+
+  * Remove valgrind as build-dependency, seems unneeded unless
+    doing debug work and is not available on all architectures.
+
+ -- Jonathan Carter <jcc@debian.org>  Fri, 03 Sep 2021 16:07:11 +0200
+
+bcachefs-tools (0.1+git20210805.6c42566-1) unstable; urgency=medium
+
+  * New upstream snapshot
+  * Update standards version to 4.6.0
+  * Add python3-docutils as dependency
+  * Do not run tests at package build time
+
+ -- Jonathan Carter <jcc@debian.org>  Tue, 06 Apr 2021 15:11:27 +0200
+
+bcachefs-tools (0.1+git20201025.742dbbdb-1) unstable; urgency=medium
+
+  * New upstream snapshot
+
+ -- Jonathan Carter <jcc@debian.org>  Mon, 26 Oct 2020 08:45:37 +0200
+
+bcachefs-tools (0.1+git20201017.8a4408-1~exp1) unstable; urgency=medium
+
+  * New upstream release
+  * Bump debhelper-compat to 13
+  * Update standards version to 4.5.0
+  * Declare Rules-Requires-Root: no
+  * debian/copyright:
+    - Update copyright years
+    - Update copyright owners
+    - Add intel and ccan copyright
+  * Add build-dep on libudev-dev, python3-pytest  and valgrind
+
+ -- Jonathan Carter <jcc@debian.org>  Sun, 18 Oct 2020 17:29:27 +0200
+
+bcachefs-tools (0.1+git20190829.aa2a42b-1~exp1) experimental; urgency=medium
+
+  * Initial Release (Closes: #935178)
+
+ -- Jonathan Carter <jcc@debian.org>  Mon, 16 Sep 2019 10:36:04 +0000

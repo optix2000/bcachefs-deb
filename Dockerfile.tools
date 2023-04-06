@@ -1,0 +1,8 @@
+FROM rust:1-slim-bullseye
+
+RUN apt-get update
+
+# bcache Build deps
+RUN apt-get install -y build-essential git pkgconf llvm clang devscripts
+# bcache libs
+RUN apt-get install -y liburcu-dev libsodium-dev liblz4-dev libkeyutils-dev libaio-dev libblkid-dev libzstd-dev uuid-dev zlib1g-dev libudev-dev libclang-dev
